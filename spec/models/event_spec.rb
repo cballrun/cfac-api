@@ -4,8 +4,10 @@ RSpec.describe Event, type: :model do
   describe 'relationships' do
     it { should have_many :artist_events }
     it { should have_many :sponsor_events }
+    it { should have_many :vendor_events }
     it { should have_many(:artists).through(:artist_events) }
     it { should have_many(:sponsors).through(:sponsor_events) }
+    it { should have_many(:vendors).through(:vendor_events) }
   end
 
   describe 'validations' do
