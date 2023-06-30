@@ -4,6 +4,7 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :events, resolver: Queries::Events
+    field :find_event, resolver: Queries::FindEvent
 
 
   end
